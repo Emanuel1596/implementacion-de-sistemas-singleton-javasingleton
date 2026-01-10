@@ -54,3 +54,6 @@ El código actual no impide que múltiples partes de la aplicación creen sus pr
 
 ## 🧪 Pruebas
 Asegúrate de ejecutar el método `main` en la clase `Main` después de realizar cada transformación para verificar que el patrón se ha implementado correctamente y que el comportamiento es el esperado.
+
+
+Entrega final – Patrón Singleton (Emanuel Villanueva).
