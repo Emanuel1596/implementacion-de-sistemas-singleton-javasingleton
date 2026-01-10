@@ -1,14 +1,19 @@
 public class Main {
+
     public static void main(String[] args) {
-        // Different parts of the code create their own config...
-        AppConfig config1 = new AppConfig();
-        AppConfig config2 = new AppConfig();
 
-        config1.setTheme("Dark"); // Change setting in one object...
+        // Obtener la primera referencia
+        AppConfig config1 = AppConfig.getInstance();
+        config1.setTheme("Dark");
 
-        config1.printConfig();
-        config2.printConfig(); // ...but the other object is unaware! This is bad.
+        // Obtener la segunda referencia
+        AppConfig config2 = AppConfig.getInstance();
 
-        System.out.println("Are these the same instance? " + (config1 == config2));
+        // Verificar si son la misma instancia
+        System.out.println("¿config1 == config2? " + (config1 == config2));
+
+        // Mostrar valores
+        System.out.println("Tema desde config2: " + config2.getTheme());
+        System.out.println("Idioma: " + config2.getLanguage());
     }
 }
